@@ -1,0 +1,19 @@
+;******************************************************************************
+;*** Web Grenade Launcher *****************************************************
+;******************************************************************************
+; Default grenade launcher loaded with webby grenades. 
+
+;------------------------------------------------------------------------------
+[WeaponTypes]
+E1345D2746ED2			= GrenadeLauncher_Web
+
+;------------------------------------------------------------------------------
+[GrenadeLauncher_Web]:[GrenadeLauncher]
+Damage				= 0
+ROF				= 60
+Range				= 4.5
+Projectile			= WebCapsule
+Speed				= 30
+Warhead				= Webby
+Anim				= GrenadeLauncherFire			; sound hook
+Report				= GrenadeLauncherFire
