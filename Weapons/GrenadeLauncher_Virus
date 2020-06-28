@@ -1,0 +1,17 @@
+;******************************************************************************
+;*** Bio Grenade Launcher *****************************************************
+;******************************************************************************
+; Default grenade launcher loaded with virus grenades. 
+
+;------------------------------------------------------------------------------
+[WeaponTypes]
+B22313F7D26A2			= GrenadeLauncher_Virus
+
+;------------------------------------------------------------------------------
+; Bio Capsule Launcher
+[GrenadeLauncher_Virus]:[GrenadeLauncher]
+Damage				= 1
+Warhead				= Organic
+Projectile			= Grenade_262A7B1689D7F
+IvanBomb.Warhead=
+IvanBomb.Damage=
