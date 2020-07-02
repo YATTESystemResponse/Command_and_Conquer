@@ -54,3 +54,33 @@ BalloonHover=yes ; ie never land
 MoveSound=RocketeerMoveLoop
 ;ElitePrimary=Lunarlaser
 JumpJetTurn=yes ;Use proper turn logic
+
+
+[OXANNA]
+Name=Valkyrie
+Prerequisite=NTPYRA
+Category=Soldier
+Primary=MultiCluster
+CrushSound=SQUISH6
+TiberiumProof=yes
+TiberiumHeal=yes
+Strength=60
+Armor=none
+TechLevel=4
+Sight=4
+Speed=4
+AllowedToStartInMultiplayer=no
+Owner=GDI,Nod
+Cost=630
+Pip=white
+Points=5
+VoiceSelect=11-I000,11-I002,11-I004,11-I006
+VoiceMove=11-I008,11-I010,11-I012
+VoiceAttack=11-I014,11-I016,11-I018
+VoiceFeedback=
+VoiceDie=DEDGIRL1,DEDGIRL2,DEDGIRL2,DEDGIRL4
+Locomotor={4A582744-9839-11d1-B709-00A024DDAFD1}
+PhysicalSize=1
+MovementZone=Infantry
+ThreatPosed=10	; This value MUST be 0 for all building addons
+ImmuneToVeins=yes
