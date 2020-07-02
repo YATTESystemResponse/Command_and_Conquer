@@ -1,0 +1,38 @@
+
+;-----------------------------------------------------------------------------
+;Jump Jet Cannon
+[JumpGun]
+Damage				= 15 ; was 20
+Burst				= 2
+ROF				= 40
+Range				= 5  ; was 4
+Projectile=InvisibleAll
+Speed=100
+Warhead				= SA_OnlyVSInfantry
+Report				= JumpGunShoot
+;Anim=MGUN-N,MGUN-NE,MGUN-E,MGUN-SE,MGUN-S,MGUN-SW,MGUN-W,MGUN-NW
+
+;------------------------------------------------------------------------------
+[JumpRaygun];JumpEMPGun;JumpWebLauncher
+Damage				= 20
+Burst				= 2
+ROF				= 40;50
+Range				= 6 ; 8
+Speed				= 100
+Projectile			= InvisibleAll
+Warhead				= Shock;EMEffect	;EMPBeamWarhead
+Report				= ElectroGunShoot
+Anim=ELECMUZZLE
+
+IsLaser				= yes
+LaserInnerColor			= 106,90,205
+LaserOuterColor			= 0,0,0
+LaserOuterSpread		= 0,0,0
+
+;IsRadBeam=yes
+;Beam.Color=155,155,255
+
+;IsElectricBolt=true
+;Bolt.Color1= 0,0,0
+;Bolt.Color2= 0,0,255
+;Bolt.Color3= 255,255,255
