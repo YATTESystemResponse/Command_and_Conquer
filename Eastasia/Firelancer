@@ -1,0 +1,9 @@
+; Eastasian Flamethrower Infantry
+[AsiaFIREGUY]
+UIName=Name:FIREGUY
+Name=Eastasian Flamethrower
+Primary=FireSpray
+Image=FIREGUYE
+Cost=300
+TechLevel=5
+Prerequisite=EGBRCK,EGTECH
