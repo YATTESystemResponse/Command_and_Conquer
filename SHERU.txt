@@ -1,0 +1,117 @@
+
+[CCAN]
+UIName				= Name:CCAN
+Name				= Howitzer
+;Prerequisite			= GATECH
+Primary				= ChaosGun
+Strength=200
+Category=LRFS
+Armor=heavy
+Turret=no
+IsTilter=yes
+Crusher=yes
+TooBigToFitUnderBridge=true
+TechLevel=1
+Sight=9
+Speed=5
+CrateGoodie=no
+Owner=British,French,Germans,Americans,Alliance,Russians,Confederation,Africans,Arabs,YuriCountry
+Cost=1200
+Soylent=1200
+Points=25
+ROT=5
+CrateGoodie=no
+IsSelectableCombatant=yes
+Explosion=TWLT070,S_BANG48,S_BRNL58,S_CLSN58,S_TUMU60
+VoiceSelect=GenAllVehicleSelect
+VoiceMove=GenAllVehicleMove
+VoiceAttack=GenAllVehicleAttackCommand
+VoiceFeedback=
+DieSound=GenVehicleDie
+CrushSound=TankCrush
+CreateSound=ChaosCreated
+AllowedToStartInMultiplayer=no
+MaxDebris=2
+Locomotor={4A582741-9839-11d1-B709-00A024DDAFD1}
+MovementZone=Normal
+;RequiresStolenAlliedTech=yes
+RequiresStolenSovietTech=yes
+RequiresStolenThirdTech=yes
+ThreatPosed=15	; This value MUST be 0 for all building addons
+DamageParticleSystems=SparkSys,SmallGreySSys
+VeteranAbilities=STRONGER,FIREPOWER,SIGHT,FASTER
+EliteAbilities=SELF_HEAL,STRONGER,FIREPOWER,ROF
+Accelerates=false
+ImmuneToVeins=yes
+BerserkFriendly=yes
+Trainable=no
+Ammo=6
+Reload=400
+PipScale=Ammo
+Size=3
+
+[ChaosGun]
+Damage				= 1000
+ROF				= 75
+Range				= 12
+MinimumRange			= 6
+Projectile			= Shell120mmPsych
+Speed				= 10
+Warhead				= PsychGasCreate2
+Report				= CannonShootn			; ApocalypseAttackGround
+Anim				= CannonShoot
+Bright				= yes
+Lobber				= yes
+
+; SE2K0014
+[SE2K0014]
+Damage				= 100
+ROF				= 175
+Range				= 20
+MinimumRange			= 5
+Projectile			= Shell120mmGreen
+Speed				= 10
+Warhead				= Gas
+Report				= CannonShootn			; 120MMF
+Anim				= CannonShoot
+Bright				= yes
+Lobber				= yes
+
+[SE2K0015]
+Image=TORPEDO
+Cluster=3
+Arcing=yes
+High=yes
+
+; Chemical Artillery
+[SE2K0013]
+Name=Chemical Artillery
+Image=ART2
+MovementZone=Crusher
+DamageParticleSystems=SparkSys,SmallGreySSys
+Locomotor={4A582741-9839-11d1-B709-00A024DDAFD1}
+Owner=Nod
+MaxDebris=4
+Weight=3.5
+CrateGoodie=yes
+Crewed=yes
+Crusher=yes
+NoMovingFire=true
+DeployToFire=yes
+DeploysInto=SE2K0016
+Explosion=TWLT070,S_BANG48,S_BRNL58,S_CLSN58,S_TUMU60
+ZFudgeColumn=10
+ZFudgeTunnel=14
+Prerequisite=NAWEAP,NAWAST
+Primary=SE2K0014
+TechLevel=8
+Strength=300
+Sight=10
+Cost=2500
+Points=35
+ThreatPosed=10
+FireAngle=42
+ROT=2
+AllowedToStartInMultiplayer=no
+EliteAbilities=SELF_HEAL,FASTER
+
