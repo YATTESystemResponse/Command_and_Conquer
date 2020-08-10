@@ -1,0 +1,195 @@
+
+[AircraftTypes]
+= SuicidePlane
+
+; Suicide Airplane
+[SuicidePlane]
+UIName				= Name:Airplane_Kamikaze
+Name				= 
+Image=CPLN
+Strength=500
+Category			= AirPower
+
+;----- Weapons -----
+Primary				= 
+Explodes			= yes
+DeathWeapon			= SuicideBomb
+
+;----- Procuration -----
+Owner				= Nod
+TechLevel			= -1					; 6
+Prerequisite			= NATMPL,CAAIRP
+Dock=NAHPAD,GAHPAD,GAAIRC,AMRADR,CAAIRP,AFLD
+
+;----- Armor -----
+Armor				= light
+
+Sight=7
+Speed=25
+; flight characteristics
+;PitchSpeed=.9
+;PitchAngle=0
+FlightLevel=400
+AlternateSpeed=10			; this value is just used when exiting the war factory
+AlternateFlightLevel=50		; this value is just used when exiting the war factory
+Owner				= Nod
+AllowedToStartInMultiplayer=no
+Cost=1000
+Points=50
+ROT=16
+Ammo=1
+PipScale=Ammo
+Crewed=no
+GuardRange=30
+Explosion=TWLT070,S_BANG48,S_BRNL58,S_CLSN58,S_TUMU60
+DamageParticleSystems=SparkSys,SmallGreySSys
+MaxDebris=2
+ThreatPosed=10	; This value MUST be 0 for all building addons
+GuardRange=5
+Locomotor={4A582746-9839-11d1-B709-00A024DDAFD1} ;<- flying  missile -> {B7B49766-E576-11d3-9BD9-00104B972FE8}
+MovementZone=Fly
+MoveSound=PDPlaneMoveLoop
+VoiceSelect=TerroristSelect
+VoiceMove=TerroristMove
+VoiceAttack=TerroristAttackCommand
+VoiceFeedback=
+DieSound=
+CrashingSound=HornetDie
+ImpactLandSound=GenAircraftCrash
+AuxSound1=HornetTakeoff ;Taking off
+AuxSound2=HornetLanding ;Landing
+
+VeteranAbilities=STRONGER,FIREPOWER
+EliteAbilities=STRONGER,FIREPOWER
+; special function flags
+RadarInvisible=no
+Landable=yes
+MoveToShroud=yes
+;Spawned=yes
+;HunterSeeker=yes
+Selectable=true;false
+IgnoresFirestorm=yes
+ImmuneToPsionics=yes
+;Fighter=yes
+
+; Chemtrail kamikaze aircraft
+[SuicidePlane_ChemTech]
+;UIName=NOSTR:Chemtrail Plane
+;Name=Chem Bomber
+
+[KAMIKAZE]
+UIName=Name:KAMI
+Image=KAMI;KAMH
+Name=Kamikaze Fighter
+Primary=KamikazeWeapon;KamikazeHornetWeapon
+Ammo=1
+;Prerequisite=AIRPAD
+Strength=100;75
+Category=AirPower
+Armor=light
+TechLevel=-1
+MoveToShroud=yes
+Sight=0;2
+RadarInvisible=no
+;Insignificant=yes
+Spawned=yes 
+Selectable=no 
+DontScore=yes;no
+Landable=no
+Speed=15;12
+PitchSpeed=1.1
+PitchAngle=30
+Owner=Russians,Confederation,Africans,Arabs
+;Dock=GAAIRC,AIRPAD,AMRADR,AIRPAD2,GAAIRCTW,AIRPADTW
+Cost=500;50
+Points=15;20
+ROT=5;3
+;PipScale=Ammo
+;ConsideredAircraft=yes
+;AirportBound=yes ; If I ever need to land and there are no airports I crash because I can only land on them
+Explosion=TWLT070,S_BANG48,S_BRNL58,S_CLSN58,S_TUMU60
+Maxdebris=3
+VoiceSelect=
+VoiceMove=
+VoiceAttack=
+MoveSound=IntruderMoveLoop
+CrashingSound=IntruderDie
+ImpactLandSound=GenAircraftCrash
+Locomotor={4A582746-9839-11d1-B709-00A024DDAFD1} ;flying
+;Locomotor={B7B49766-E576-11d3-9BD9-00104B972FE8} ;rocket
+
+;MovementRestrictedTo=Water ; See if this will affect landing only
+
+MovementZone=Fly
+DamageParticleSystems=SparkSys,SmallGreySSys
+ThreatPosed=0
+SpecialThreatValue=1
+CanPassiveAquire=no ; Won't try to pick up own targets
+CanRetaliate=no; Won't fire back when hit
+VeteranAbilities=STRONGER,FIREPOWER,SIGHT,FASTER
+EliteAbilities=SELF_HEAL,STRONGER,FIREPOWER,ROF
+Size=5
+Explodes=no
+Fighter=yes
+AllowedToStartInMultiplayer=no
+Crashable=yes
+TooBigToFitUnderBridge=true
+DeathWeapon=KamikazeExplosion;KHornetCollision
+Trainable=no
+FlyBy=true
+
+	PipScale=Ammo
+	Ammo=10
+	...
+	Crashable=yes
+	Fighter=yes	; this is needed to adjust crash trajectory...
+	FlyBack=yes	; since this is really some sort of missile...
+	FlyBy=no	; slower as it approaches the target...
+	...
+	Crewed=no
+	Selectable=no	; this should better be here to adjust for not being able to command the plane (since it is spawned by superweapon action)
+	Spawned=yes
+	...
+	Voices from RobotTank
+	The rest should be a combo of B-17 (and thus Badger) stats and PDPLANE stats 	wherever needed to make it work as a superweapon's plane...
+
+[KamikazeWeapon];[KamikazeHornetWeapon]
+Damage=1
+Projectile=Invisible
+Warhead=KamikazeWH
+Range=7;6
+ROF=100
+Anim=SuicideAnim
+
+[KamikazeCrash]
+Damage=200
+Projectile=KamiProj
+Warhead=ParabombWH
+Range=6
+Speed=50
+ROF=500
+LimboLaunch=yes
+
+[KamikazeExplosion]
+Projectile=Invisible
+Damage=150
+Warhead=ParaBombWH
+Range=1
+ROF=100
+
+[KHornetCollision] ;A crashing Hornet turns into this bullet at the last second
+Damage=250
+ROF=20
+Range=3
+Projectile=AAHeatSeeker2 ; will be Hornet shaped bullet
+Speed=30
+Warhead=KHornetWH
+Report=HornetCollision
+;Bright=yes
+
+[KHornetWH]
+Wall=yes
+CellSpread=1
+Verses=100%,100%,100%,100%,80%,50%,120%,80%,50%,100%,0%
+InfDeath=2
+AnimList=LRGEXP
