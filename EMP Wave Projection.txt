@@ -1,0 +1,13 @@
+
+; Tesla pulse
+[EMPExplosion]
+Damage=1
+Range=1
+ROF=50 ;200 needs to be closer to animation time (Kills everything anyway)
+Projectile=InvisibleLow
+Speed=1
+Warhead=EMPuls4
+AreaFire=yes ; just shoot straight at ground under feet
+FireOnce=yes ; Only fire once; don't stay in attack mission
+Report=YuriDeploy
+Anim=PSIRING

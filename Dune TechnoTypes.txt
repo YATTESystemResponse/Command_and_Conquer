@@ -1,0 +1,247 @@
+[GenInfantry]
+Score=2
+StormDamage=138
+UnitGroup=FromBarracks
+TurnRate=0.2
+;TurretAttach=InfantryGun
+Primary=InfantryGun
+Terrain = Rock, Sand, NBRock, InfRock, Ramp
+BuildTime = 87
+Size = 1
+Armour = None, 50, InfRock
+
+;----- Base Attributes -----
+;Health					= 600
+Strength				= 75
+
+Infantry = true
+CanBeSuppressed = TRUE
+AiFoot = TRUE
+TechLevel = 1
+ReinforcementValue = 1
+Crushable = TRUE
+ChaosEffect = SmallChaosFX
+HawkEffect = SmallHawkFX
+TastyToWorms = TRUE
+WormAttraction = 3
+CanMoveAnyDirection = TRUE
+GetsHeightAdvantage = FALSE
+CanBeDeviated = FALSE
+CanBeRepaired = FALSE
+AIThreat = 20
+
+;[ATInfantry]
+[ATGunner]
+House=Atreides
+PrimaryBuilding=ATBarracks
+Cost=60
+Speed=6.0
+ViewRange = 7
+VeterancyLevel = 5 
+Health = 800
+ExtraDamage = 50  
+VeterancyLevel = 10
+CanSelfRepair = 1
+VeterancyLevel = 20
+Elite = TRUE
+ExtraArmour = 50
+
+[HKLightInf]
+House = Harkonnen 
+PrimaryBuilding = HKBarracks
+Cost = 50
+Speed=4.0
+ViewRange = 6
+WormAttraction = 4
+VeterancyLevel = 3 
+ExtraDamage = 25
+VeterancyLevel = 10
+CanSelfRepair = 1  
+VeterancyLevel = 20
+ExtraDamage = 50  
+ExtraArmour = 50
+
+; Harkonnen Missilier
+[HKMissilier];[HKTrooper]
+ProtoTypes			= GenInfantry
+House = Harkonnen
+StormDamage=74
+PrimaryBuilding = HKBarracks
+UnitGroup = FromBarracks
+Terrain = Rock, Sand, NBRock, InfRock, Ramp
+Cost = 90
+BuildTime = 99
+Size = 1
+Speed = 4.0      
+TurnRate = 0.2     
+TurretAttach = HKTrooperGun 
+Armour = None, 50, InfRock
+
+;----- Base Attributes -----
+;Health				= 300
+Strength			= 37.5
+Infantry = true
+CanBeSuppressed = TRUE
+ViewRange = 12
+AiFoot = TRUE
+TechLevel = 2
+ReinforcementValue = 2
+Crushable = TRUE
+ChaosEffect = SmallChaosFX
+HawkEffect = SmallHawkFX
+TastyToWorms = TRUE
+WormAttraction = 4
+CanMoveAnyDirection = TRUE
+CanBeDeviated = FALSE
+CanBeRepaired = FALSE
+AIThreat = 40
+VeterancyLevel = 4 
+ExtraDamage = 25
+VeterancyLevel = 10
+CanSelfRepair = 1  
+VeterancyLevel = 20
+ExtraDamage = 50  
+ExtraArmour = 50  
+
+; Atreides Mortarman
+[ATKindjal]
+Score				= 2
+DeployInf = TRUE
+House = Atreides
+StormDamage=74 
+;StormDamage=10
+PrimaryBuilding = ATBarracks
+UnitGroup = FromBarracks
+Terrain = Rock, Sand, NBRock, InfRock, Ramp
+UpgradedPrimaryRequired = TRUE
+Cost = 150
+BuildTime = 144
+Size = 1
+Speed = 4.0      
+TurretAttach = ATKindjalGun, ATKindjalBigGun 
+TurnRate = 0.2     
+Armour = None, 50, InfRock
+;Health = 600
+Strength			= 75
+Infantry = true
+ViewRange = 10
+AiFoot = TRUE
+TechLevel = 4
+ReinforcementValue = 3
+Crushable = TRUE
+ChaosEffect = SmallChaosFX
+HawkEffect = SmallHawkFX
+TastyToWorms = TRUE
+WormAttraction = 3
+CanMoveAnyDirection = TRUE
+CanBeDeviated = FALSE
+CanBeRepaired = FALSE
+AIThreat = 50
+VeterancyLevel = 2 
+Health = 800
+ExtraDamage = 50  
+VeterancyLevel = 10
+CanSelfRepair = 1
+VeterancyLevel = 20
+Elite = TRUE
+ExtraDamage = 100  
+
+; Ordos Mortarman
+[ORMortar]
+Score = 2
+DeployInf = TRUE
+House = Ordos
+StormDamage=74 
+PrimaryBuilding = ORBarracks
+UnitGroup = FromBarracks
+Terrain = Rock, Sand, NBRock, InfRock, Ramp
+UpgradedPrimaryRequired = TRUE
+Cost = 100
+BuildTime = 144
+Size = 1
+Speed = 4.0      
+TurnRate = 0.2     
+TurretAttach = ORMortarInfGun, ORMortarInfBigGun
+Armour = None, 50, InfRock
+;Health				= 700
+Strength			= 87.5
+Infantry = true
+ViewRange = 8
+AiFoot = TRUE
+TechLevel = 4
+ReinforcementValue = 3
+Crushable = TRUE
+ChaosEffect = SmallChaosFX
+HawkEffect = SmallHawkFX
+TastyToWorms = TRUE
+WormAttraction = 3
+CanMoveAnyDirection = TRUE
+CanBeDeviated = FALSE
+CanBeRepaired = FALSE
+AIThreat = 40
+VeterancyLevel = 4 
+CanSelfRepair = 1 
+VeterancyLevel = 10
+ExtraArmour = 50  
+VeterancyLevel = 20
+ExtraDamage = 50  
+
+[Pistol2B751579A596D];[ORMortarInfGun];[HKEngineerGun]
+Bullet = Pistol_B
+ReloadCount = 45
+TurretDisableIfUnitDeployed = TRUE
+
+[PistolDFA691C7C7DE5];[ATKindjalGun]
+Bullet = Pistol_B
+ReloadCount = 50
+TurretDisableIfUnitDeployed = TRUE
+
+;[ATInfGun]
+;[HKLightInfantryGun]
+[GenInfantryMachineGun]
+Damage				= 27.375
+Projectile			= 
+Bullet				= LMG_B
+;TurretMuzzleFlash = Smuzz2
+Warhead				= LMG_W
+ROF				= 30
+ReloadCount			= 30
+
+[KindjalRocketLauncher];[ATKindjalBigGun]
+TurretMuzzleFlash  = Muzzle2
+Bullet = Kindjal_B
+ReloadCount = 50
+TurretDisableIfUnitUndeployed = TRUE
+
+[Mortar];[ORMortarInfBigGun]
+TurretMinXRotation = -90.0 
+TurretMaxXRotation = -30.0
+TurretXRotationAngle = 10.0
+Bullet = Mortar_B    
+ReloadCount = 45
+TurretDisableIfUnitUndeployed = TRUE
+
+[LMG_B]
+Speed = -1
+MaxRange = 5
+Debris = DebrisSmall
+Damage = 219
+Warhead = LMG_W
+ExplosionType = mghit
+Shot = TRUE
+
+[LMG_W]
+Verses				= 100%,?%,?%,70%,50%,40%,?%,?%,100%
+Versus.None			= 100
+Versus.Earplugs 		= 100
+Versus.BPV 			= 70
+Light = 70
+Medium = 50
+Heavy = 40
+Concrete = 100
+Walls = 20
+Building = 5
+CY = 5
+Harvester = 5
+Invulnerable = 0
+Aircraft = 45
