@@ -1,0 +1,90 @@
+;******************************************************************************
+;*** Portable Nuke Launcher ***************************************************
+;******************************************************************************
+; Man-portable nuke launcher
+; Called "Atomic Dragon", "Davy Crockett", "Fat Man", "Atomic Arrow" etc. 
+; No longer has UC variants - disallow use from occupied structures. 
+; (Technically, this is because of range limitations.)
+; For the record, the UC variants were identical, but had dual burst (Rookie) and quadral burst (Elite), 
+; and the damage increase of 5 over their non-UC counterparts (net 35 (Rookie) and 45 (Elite) damage, which 
+; is laughably low now, as the non-UC weapons have since gotten a damage overhaul.) 
+; Formerly a rocket launcher, now a recoilless gun. 
+
+;------------------------------------------------------------------------------
+[WeaponTypes]
+
+
+;------------------------------------------------------------------------------
+; Jade Dragon atomic missile
+[AtomicDragon]
+Damage				= 600
+ROF				= 90;50
+Range				= 88;6
+Projectile			= Rocket_CD3E3FF5FA9C4
+Speed				= 25
+Warhead				= MININUKE
+Report				= RocketTakeoff6
+Bright				= yes
+RadLevel			= 100
+AnimList			= V3TO
+
+
+;------------------------------------------------------------------------------
+[InfantryNuke]
+Damage=350
+ROF=100
+Range=6
+Projectile=AAHeatSeeker2
+Speed=80
+Warhead=HE2
+Report=RKETINF1
+
+
+;------------------------------------------------------------------------------
+[AtomicDragonE]
+Damage=40
+Projectile=MIRV
+Warhead=TacticalNuke
+
+;------------------------------------------------------------------------------
+; Man-portable nuclear missile launcher
+[TurretNukeMissileLnchr]
+Damage=250
+ROF=200		;20
+Range=5
+Projectile=TurretNukeMissile
+Speed=50
+Warhead=MiniNuke;_AntiVehicle
+Report=MissileLaunch3
+Bright=yes
+RadLevel=200
+Burst=2
+
+;------------------------------------------------------------------------------
+[TurretNukeMissileLnchrE]
+Damage=350
+ROF=100
+Range=6
+Projectile=TurretNukeMissile
+Speed=80
+Warhead=MiniNuke;_AntiVehicle
+Report=MissileLaunch3
+Bright=yes
+RadLevel=200
+Burst=3
+
+[Rocket_CD3E3FF5FA9C4]
+Image				= MISLSAM
+Color				= NeonYellow
+Shadow				= yes
+Rotates				= yes
+;ROT				= 2			; 4
+Arm				= 200
+Proximity			= yes
+High				= yes
+SubjectToWalls			= no
+SubjectToCliffs			= yes
+SubjectToElevation		= yes
+Inaccurate			= yes
+Acceleration			= 1
+High				= no

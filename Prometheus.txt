@@ -1,0 +1,50 @@
+
+; Prometheus Firestorm Artillery Mech
+;[PROM]
+[Prometheus]
+UIName=Name:Prometheus
+Name=Prometheus
+WalkRate=2
+Image=MMC2
+Prerequisite=GAWEAP,GADROP
+
+;----- Weapons -----
+Primary				= PrometheusHowitzer
+Elite				= 155mmxx				; Taken out - it was waaay to powerful up there. 
+ElitePrimary			= 155mmxx
+FireAngle			= 64					; Vertical		; 80
+
+Strength			= 300					; 400
+Category=LRFS
+Armor				= light					; heavy
+Turret=yes
+IsTilter=no
+;TargetLaser=yes
+TooBigToFitUnderBridge=true
+TechLevel=13
+Sight				= 9					; 8
+Speed				= 5					; 4
+CrateGoodie=yes
+Crusher=yes
+Crewed=yes
+Owner=GDI
+Cost				= 2600					; 975
+Points=25
+ROT				= 2					; 5
+Explosion=TWLT070,S_BANG48,S_BRNL58,S_CLSN58,S_TUMU60
+VoiceSelect=25-I000,25-I002,25-I004,25-I006
+VoiceMove=25-I012,25-I014,25-I016,25-I018,25-I022
+VoiceAttack=25-I014,25-I022,25-I024,25-I026
+VoiceFeedback=
+MaxDebris=4
+Locomotor={55D141B8-DB94-11d1-AC98-006008055BB5}
+MovementZone=Destroyer
+ThreatPosed=40	; This value MUST be 0 for all building addons
+DamageParticleSystems=SparkSys,SmallGreySSys
+DamageSmokeOffset=100, 100, 275
+Weight=3.5
+EliteAbilities=SENSORS
+Accelerates=false
+ZFudgeColumn=8
+ZFudgeTunnel=13
+

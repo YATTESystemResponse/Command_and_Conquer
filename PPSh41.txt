@@ -1,0 +1,50 @@
+
+;******************************************************************************
+;*** PPSh41 (Commissar) *******************************************************
+;******************************************************************************
+; New instead of Tokarev. Tokarev instead gets fluffed as Soviet Technician and Pilot's gun. 
+
+; PPSh41 submachine gun
+[PPSh41]	; this is RA2/YR's M1Carbine
+Damage=15
+ROF=20
+Range=3
+Projectile=InvisibleLow
+Speed=100
+Warhead=SA
+Report=ConscriptAttack
+OccupantAnim=UCCONS
+
+; PPSh41 submachine gun ELITE
+[PPSh41E]	; this is RA2/YR's M1CarbineE
+Damage=20
+ROF=20
+Range=4
+Projectile=InvisibleLow
+Speed=100
+Warhead=SA
+Report=ConscriptAttack
+OccupantAnim=UCCONS
+
+ROF=25
+Range=4
+
+[UCPPSh41]
+Damage=20
+ROF=20
+Range=6 ;7
+Projectile=InvisibleHigh
+Speed=100
+Warhead=SSAB
+Report=SovietOccupiedAttack
+OccupantAnim=UCCONS
+
+[UCElitePPSh41]
+Damage=30
+ROF=20
+Range=6 ;7
+Projectile=InvisibleHigh
+Speed=100
+Warhead=SSAB
+Report=SovietOccupiedAttack
+OccupantAnim=UCCONS
