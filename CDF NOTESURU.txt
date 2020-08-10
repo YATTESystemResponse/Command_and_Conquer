@@ -1,0 +1,209 @@
+
+
+
+; [Footsoldier]	[Grenadier]
+; [Firelancer]	[Mortar]
+; [Flamethrower]
+; [Land Gear]	[Sky Gear]
+; [Hacker]	[ShadowHand]
+; [Shikari]	[Alita]
+
+
+
+
+
+
+Death Toll
+CDF Light Tank		-> Liberator?
+CDF [Medium] Tank	-> Looted Abrams?
+CDF Heavy Tank		-> ?
+ARRF MBT		-> Abrams
+Mobile Sensor Array	------> LPST/DPSA
+Mobile Sensor Array (D)	---/
+CDF Light Infantry
+CDF Disc Thrower
+CDF Rocket Infantry
+MCV
+CDF LAW MCV
+CDF Construction Yard
+CDF Power Plant
+CDF BFG			-> BOLO
+Ghost Stalker		---\
+Ghost Stalker 2		------- Unify? 
+Ghost Stalker 3		---/
+CDF Barracks
+CDF Carryall
+CDF Apache
+Tiberium Refinery
+Sandbags
+Pavement
+CDF Power Converter
+CDF War Factory
+Water Tower
+CDF Solar Upgrade
+CDF Solar Upgrade 2
+CDF Commando 1 VLN3
+CDF Commando 2 M79
+CDF Commando 3 EFLT
+CDF Service Depot
+Tiberium Silo
+CDF Radar
+Pillbox
+EMP Cannon
+CDF Tech Center
+CDF Helipad
+Tesla Defense
+CDF MASH		-> Ambulance
+
+ARRF Missile Tank	---\
+CDF Missile Tank	-------- Unify?
+CDF Mobel (sic) SAM
+CDF RPG Launcher
+
+CDF Artillery
+
+CDF Recon 1		---\
+CDF Recon 2		------ These are Buggy variants, rename them according to weapon. 
+CDF Recon 3		---/
+
+CDF Harvester		------ Unify? 
+Harvester		---/
+
+ARRF AirCav1 VLN3	---> GI
+ARRF AirCav2 CHGN	-\-> Commando (Chaingun -> Machine gun)
+CDF Commando 1 VLN3	-/-\
+CDF Commando 2 M79	------> Expert Scavenger? -> Stalker
+CDF Commando 3 EFLT	-/
+ARRF AirCav 3 C4	-> dele
+ARRF AirCav 4 M79	-> Grenadier
+ARRF AirCav 5 SHGN	-> GI/Marine Shotgunner
+ARRF AirCav 6 SNPR	-> Sniper
+ARRF AirCav 7 ATP	-> dele
+ARRF AirCav Major	-> Sergeant
+CDF Apache		-> Apache XOR scavenged/improvised helicopter
+CDF Helipad		-> dele
+CDF Light Infantry (HP 150) -> Armored Scavenger
+FC Medic		-> Medic
+FC Engineer		-> Engineer
+ARRF Carryall, CDF Carryall -> dele
+Pillbox			-> Pillbox
+ARRF Humvee 1		\
+ARRF Humvee 2		\
+ARRF Humvee 3		\
+ARRF Humvee 4		---> Humvee (variable variants with weapons?)
+"HoverCav Missile Vehicle" -> dele
+"HoverCav RPG Vehicle" -> dele
+Titan -> add mgun to mecha
+Mammoth MKII (with BFM2) -> dele
+SAPC (w/VLN3) -> dele
+Subtank (w/BF2) -> dele
+ARRF AirCav 9	-> ?
+ARRF AirCav 10	-> ?
+
+Covert Ops by Timothy Yeung (Commander Squall)
+Turret			= Cannon Turret Emplacement
+Light Tower		= 
+Light Post		= 
+V3 Launcher + Multi-Missile Launcher = Missile Tank?
+Grenadier		= Grenadier
+Flamer			= Flamer
+Armory			= 
+Mutant Combatant	= Mutant Warrior
+Thief			= 
+Hover Grenade Bike	= 
+AA Gun			= Quad Gun
+Tick Tank Mk. II	= 
+Light Battle Tank	= Light Tank
+Mobile Artillery	= Howitzer
+Flame Tank		= Flame Tank
+Mobile SAM		= 
+Troop Truck		= Truck
+Cobra
+Heavy Battle Tank
+Covert Harvester
+Stumpy
+Mobile Stealth Generator = 
+Cannoneer		= Cannoneer
+Forge
+GDI Hospital
+Tiberium Research Center = 
+NOD Citadel		= Soviet Citadel
+Volkov			= Volkov
+Atomic Infantry	+ Nuke Trooper	= Nuke Trooper/Confessor
+MAD Tank		= Devastator
+Chem Warrior		= Chem Warrior
+Commando		= Commando
+Tanya			= Tanya
+Storm Trooper		= Storm Trooper
+Mammoth Final Type	= Mammoth Tank
+
+Prospector, Bruiser, Scavenger, Berserker, Hunter, Launcher, Copter, Diver, Rover, Tracker, Master, Officer, Bomber, Commander, Commissioner, Mutator, Sweeper, Morpher, Leader, Fighter, Brawler, Destroyer, Cruiser, Collector, Gatherer, Carrier, Transporter, Terminator, Eliminator, Operator, Jaeger, Forager
+
+mar.sei1173@gmail.com
+
+What warrants a prefix? 
+
+Mono Beetle, Gun Beetle, Rocket Beetle, Bomb Beetle, Spark Beetle, Spring Beetle, Gold Beetle, Gun Wing, Bomb Wing, Gun Hunter, Laser Hunter, Shield Hunter, Rhino Jet, Rhino Cannon, Rhino Spike, Rhino Metall, Rhino Spring, Mono Hawk, Gun Hawk, Laser Hawk, Sky Hawk, Bomb Hawk
+
+
+[DESTRO]
+Name=Cyborg Destroyer
+Category=Soldier
+Prerequisite=NAHAND,NATECH
+Primary=CyCannonII
+Secondary=FireballLauncher
+CrushSound=SQUISHY2
+Crushable=no
+TiberiumProof=yes
+TiberiumHeal=yes
+Fearless=yes
+Pip=white
+Strength=200 ; w350
+Armor=light
+TechLevel=4
+Sight=10
+Speed=4
+Owner=Nod
+Cost=1500
+Points=5
+VoiceSelect=22-I000,22-I002,22-I006
+VoiceMove=22-I008,22-I010,22-I014,22-I016,22-I020
+VoiceAttack=22-I008,22-I010,22-I012,22-I018
+VoiceFeedback=
+VoiceDie=DEDMAN1,DEDMAN2,DEDMAN2,DEDMAN4,DEDMAN5,DEDMAN6
+Locomotor={4A582744-9839-11d1-B709-00A024DDAFD1}
+PhysicalSize=1
+MovementZone=Infantry
+DamageParticleSystems=SparkSys
+ThreatPosed=15	; This value MUST be 0 for all building addons
+EliteAbilities=STRONGER
+BuildLimit=3
+ImmuneToVeins=yes
+
+;Cyborg Commando Plasma Cannon
+[CyCannon]
+Damage=120
+ROF=50
+Range=7
+Projectile=ProtonBlast
+Speed=70
+Warhead=PlasmaWH
+Report=scrin5b
+
+;Cyborg Commando Plasma Cannon
+[CyCannonII]
+Damage=200
+ROF=300
+Range=8
+Projectile=ProtonBlast
+Speed=70
+Warhead=PlasmaWH
+Report=scrin5b
+
+Titan MKII: Red Chem Missile with TWLT100 explosion
+
+Long-range Titan: 155mmX6
+
+Chaingun Titan
+
+Grenade Titan

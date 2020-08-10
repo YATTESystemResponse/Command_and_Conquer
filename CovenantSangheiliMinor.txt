@@ -1,0 +1,62 @@
+
+; Covenant "Elite" Sangheili Minor
+[CovenantSangheiliMinor]
+;----- Name -----
+UIName				= Covenant Sangheili Minor
+Name				= Name:CovenantSangheiliMinor
+Category=Soldier
+
+;----- Weapons -----
+Primary				= EnergySword
+
+Elite				= EnergySwordE
+ElitePrimary			= EnergySwordE
+
+Prerequisite=GAPILE
+CrushSound=SQUISH6
+TiberiumProof=yes
+TiberiumHeal=yes
+Strength=800
+Fearless=yes
+Pip=White
+Armor=none
+TechLevel=4
+Sight=5
+Speed=8
+Owner=GDI
+Cost=700
+Points=5
+Cloakable=yes
+CloakingSpeed=2
+VoiceSelect=ELITESEL1,ELITESEL2,ELITESEL3
+VoiceMove=ELITEMOVE1,ELITEMOVE2
+VoiceAttack=ELITEATK1,ELITEATK2,ELITEATK3,ELITEATK4
+VoiceFeedback=ELITEFEEDBACK1
+VoiceDie=ELITEDIE1,ELITEDIE2,ELITEDIE3,ELITEDIE4
+Locomotor={4A582744-9839-11d1-B709-00A024DDAFD1}
+MovementZone=Infantry
+PhysicalSize=1
+ThreatPosed=10	; This value MUST be 0 for all building addons
+EliteAbilities=SCATTER,FIREPOWER
+ImmuneToVeins=yes
+AllowedToStartInMultiplayer=no
+
+[EnergySword]
+Damage=120
+ROF=60
+Range=2.5
+Projectile=Invisible
+Speed=100
+Warhead=SwordWar
+Report=ELITEATKSWORD1
+Burst=1 
+
+[BigEnergySword]
+Damage=240
+ROF=60
+Range=2.5
+Projectile=Invisible
+Speed=100
+Warhead=SwordWar
+Report=ELITEATKSWORD1
+Burst=1 
