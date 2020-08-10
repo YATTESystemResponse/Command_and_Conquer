@@ -1,0 +1,19 @@
+;***
+;*** Radar Illuminator ***
+;***
+; Radar illuminator for Shilka/Tunguska. 
+
+;------------------------------------------------------------------------------
+[RadarLaser]
+Damage				= 0
+ROF				= 50
+Range				= 7.5;10
+Speed				= 100
+Projectile			= Invisible4			; Air targets only. 
+Warhead				= RadarEffect
+;Report				= YuriDeploy			; This should play once when the AE commences. 
+Report=MirageTankDisguise
+Wave.IsLaser=yes
+Wave.IsBigLaser=yes
+;Wave.Color=180,100,100
+Wave.Color=255,0,0
