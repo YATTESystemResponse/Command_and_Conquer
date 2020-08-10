@@ -1,0 +1,299 @@
+; floating head with medical tools, a la Q2
+[DOCT]
+UIName=Name:DOCT
+Name=Cybernetic Medic
+Cost=400
+SpeedType=Hover	; walking according to TS mod documentation
+TechLevel=4
+Primary=Heal
+
+[NAPTEK]
+UIName=Name:PTEK
+Name=Psychic Research Facility
+Prerequisite=NATECH
+AmbientLight=purple
+AmbientSound=PsychicAmbient
+Operator=
+Passengers=4
+SuperWeapon=PsychicReveal
+SuperWeapon2=
+
+[NAPBRK]
+UIName=Name:PBRK
+Name=Psychic Academy
+
+--------------------------------------------------------------
+XenoTech tree
+--------------------------------------------------------------
+Perhaps these are actually different alien species (one teleport-based, one biotech-based), or even 
+sci-fi human civs. 
+
+Tech portfolio of this faction (also to consider for the XenoCult faction (ie Illuminati): 
+* Rayguns
+* Mutation
+* MindControl
+* Teleportation
+* Genetic engineering / bioweapons / parasitism
+
+******************
+*** UFO **********
+******************
+
+[UFO]
+SecretLab=yes
+SecretUnit=TRUKX
+Factory=UnitType
+Factory.ExplicitOnly=yes
+
+[TRUKX]
+BuiltAt=UFO
+
+combine unitabsorb, occupy?
+has anyone got lightpost
+sidenc still needed?
+possible to remake interactive briefing map?
+
+******************
+*** Pawn *********
+******************
+
+Abil: 
+	- Civvie weapon
+
+******************
+*** Cultist ******
+******************
+
+Abil: 
+	- Natural Weapon
+
+******************
+*** Warrior ******
+******************
+
+Abil: 
+	- Natural weapon
+
+******************
+*** Infector *****
+******************
+
+Abil: 
+	- Parasite Launch
+	- Virus Launch
+
+******************
+*** Controller ***
+******************
+
+Abil: 
+	- Mind Control
+	- Psychic Attack
+
+******************
+*** Parasite *****
+******************
+
+******************
+*** Laser Disc ***
+******************
+
+; Heat-ray
+[DiskLaser]
+
+[DiskWH]
+Verses=[like fire on first 6],0%,0%,0%,[like fire on last 2]
+Sparky=yes
+Fire=yes
+Bright=yes
+CLDisableBlue=yes
+CLDisableGreen=yes
+
+; Big heat-ray
+[DiskBigLaser]
+Damage=250
+Range=1.5
+CellRangefinding=yes
+Charges=yes
+Projectile=InvisibleVertical
+Warhead=DiskBigWH
+AnimList=IONBEAMRED
+
+[DiskBigWH]
+Verses=like fire
+ShakeScreen
+CellSpread like ioncannonwh
+Ripple like ioncannonwh
+InfDeath=4
+
+*******************
+*** Meteor Disc ***
+*******************
+
+[DiskMeteorSwarm]
+Damage=10
+ROF=0
+Projectile=SmallMeteor
+Speed=20
+
+[DiskFooSwarm]
+
+*********************
+*** Abductor Disc ***
+*********************
+
+******************
+*** Brain Disk ***
+******************
+
+********************
+*** Mutator Disk ***
+********************
+
+************************
+*** Observation Disk ***
+************************
+
+; Eye in the Sky
+[EYE]
+Name=Observator
+Image=very small saucer, spins like big saucers
+Cloakable=yes
+Primary=none
+Sensors=yes
+SensorSight=10
+Sight=10
+DetectDisguise=yes
+DetectRange=10
+Crewed=no
+Crashable=no
+
+*********************
+*** Tripod **********
+*********************
+
+; alien tri-pod
+[TRIP]
+UIName=Name:TRIP
+Name=Alien Tri-pod
+
+Primary=TripodRaygun	; heat ray
+Secondary=DeadMist
+
+ElitePrimary=TripodRaygunE
+EliteSecondary=DeadMistE
+
+DistributedFire=yes
+
+; Chaos Laser
+[TripodRay]
+DistributedWeaponFire=yes
+Projectile=TripodRayLine
+IsLaser=yes
+LaserInnerColor=255,255,0
+LaserOuterColor=190,100,0
+LaserOuterSpread=0,0,0
+Warhead=TripodRay
+
+; Chaos Laser Proj
+[TripodRayLine]
+
+; Chaos Laser WH
+[TripodRay]
+;InfDeath=5
+InfDeathAnim=InfantryBurnDeath
+
+********************
+*** Brain Tripod ***
+********************
+AKA Mastermind
+
+*** Nestling Tripod ***
+
+Spawns drones. 
+
+********************
+*** Hexapod ********
+********************
+Either Hexapod or Mothership should have Meteors and the other should have Black Hole - two Xeno superweapons. 
+
+[XenoHexapod]
+UIName=Name:XenoHexapod
+Name=Hexapod
+;Primary=HexapodMeteor
+
+********************
+*** Mothership *****
+********************
+- Called by SW. Bombards area for a while before retreating. 
+- Protected by massive force fields. Can be made to retreat by depleting shields. 
+
+; Alien Frigate
+[XenoMothership]
+UIName=Name:XenoMothership
+Name=Mothership
+Primary=MothershipMeteors
+Secondary=MothershipLasers
+Armor=MothershipArmor
+SelfHealing=yes			; while shield is up, regen is cancelled. 
+DamagedSound=ShieldDeflect
+AttachEffect.Animation=MothershipShieldFX
+AttachEffect.Duration=600
+AttachEffect.Delay=200
+AttachEffect.ArmorMultiplier=999999	; virtually immune while shields are up
+Strength=50000
+
+[XenoMeteorTower]
+
+; Defense tower which projects a singularity
+[XenoVortexTower]
+Name=Singularity Spire
+Primary=TowerVortexWeapon
+
+[TowerSingularityWeapon]
+Damage=1
+ROF=
+Range=6
+Projectile=DummyProjectile
+Warhead=VortexMaker
+Report=VortexMake
+Anim=VRTXBLST
+AreaFire=yes
+
+[VortexMaker]
+Verses=0%,0%,0%,0%,0%,0%,0%,0%,0%,0%,0%
+Spread=0.0	; initial vortex make is SINGULARITY, infinitely small point effect
+CellSpread=0.0
+AnimList=VRTX	; Vortex effect
+InfDeath=0
+
+ARTMD.INI: 
+[VRTX]
+Rate=?
+Normalized=no
+LoopCount= ; make it last half of tower's firing delay
+Layer=ground
+Flat=yes
+Translucent=yes
+Translucency=50
+Damage=1	; everything in radius takes massive damage over time every <weapon ROF> frames for as long as they remain in the radius. 
+Warhead=Vortex
+
+[Vortex]
+Verses=100%,100%,100%,100%,100%,100%,100%,100%,100%,100%,100%
+Spread=12
+CellSpread=6	; make equal to weapon Range
+AnimList=VRTX
+InfDeath=0
+Wall=yes
+Wood=yes
+Tiberium=yes
+Teleporter=yes
+
+[XenoMutatorTower]
+
+[XenoTripodTower]
+
+[XenoMeteorHub]
+
+[XenoSingularityHub]
