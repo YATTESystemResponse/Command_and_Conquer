@@ -1,0 +1,125 @@
+
+[RKET]
+Name=Harpy Suiter
+Category=Soldier
+JumpJet=yes
+Primary=20mm
+Prerequisite=NAHAND,NARADR
+Crushable=no
+Strength=120
+Fearless=yes
+Armor=light
+TechLevel=6
+Sight=6
+Pip=green
+Speed=5
+Owner=NOD
+AllowedToStartInMultiplayer=no
+Cost=600
+Points=5
+VoiceSelect=15-I000,15-I004,15-I012,15-I048
+VoiceMove=15-I018,15-I024,15-I044
+VoiceAttack=15-I044,15-I050,15-I044,15-I046
+VoiceFeedback=15-I058,15-I064
+VoiceDie=DEDMAN1,DEDMAN2,DEDMAN2,DEDMAN4,DEDMAN5,DEDMAN6
+Locomotor={92612C46-F71F-11d1-AC9F-006008055BB5}
+PhysicalSize=1
+MovementZone=Fly		; This needs to be None, like aircraft
+ThreatPosed=15	; This value MUST be 0 for all building addons
+EliteAbilities=RADAR_INVISIBLE
+Image=MUTANT3
+;Cloakable=yes
+
+; Coptmissar
+[GYRO]
+UIName				=Name:Gyrocopter
+Name				= Gyrocopter
+Category=Soldier
+JumpJet=yes
+Primary=20mmRapidAG
+Secondary=20mmRapidAA
+Prerequisite=NAHAND,RADAR
+Crushable=yes
+Strength=140
+Fearless=yes
+Armor=light	;No infantry armour here.  Don't wanna see a spy 'disguised' as a chopper
+TechLevel=4
+Sight=7
+Pip=white
+Speed=10
+Owner=Russians,Confederation,Africans,Arabs
+AllowedToStartInMultiplayer=no
+Cost=800
+Soylent=400
+Points=15
+IsSelectableCombatant=yes
+VoiceSelect=BlackOpsMove
+VoiceMove=BlackOpsMove
+VoiceAttack=BlackOpsAttackCommand
+;VoiceFeedback=RocketeerFear
+VoiceSpecialAttack=BlackOpsMove
+DieSound=
+CrashingSound=BlackOpsDie
+ImpactLandSound=GenAircraftCrash
+Locomotor={92612C46-F71F-11d1-AC9F-006008055BB5}
+PhysicalSize=1
+MovementZone=Fly		; This needs to be None, like aircraft
+ConsideredAircraft=yes
+ThreatPosed=15	; This value MUST be 0 for all building addons
+VeteranAbilities=STRONGER,FIREPOWER,ROF,SIGHT,SCATTER
+EliteAbilities=SELF_HEAL,STRONGER,FIREPOWER,ROF,FASTER
+JumpjetSpeed=30 ;params not defined use defaults (old globals way up top called Jumpjet controls)
+JumpjetClimb=20 ;HY increase climb speed; used to be 10
+JumpjetCrash=25 ; Climb, but down
+JumpJetAccel=15
+JumpJetTurnRate=8
+JumpjetHeight=500
+JumpjetWobbles=.01
+JumpjetDeviation=1
+JumpjetNoWobbles=yes ; the wobbling is in the Hover sequence of the art, instead of being programmer art/ sine wave
+Size=1
+SpeedType=Hover
+HoverAttack=yes
+Crashable=yes
+BalloonHover=yes ; ie never land
+MoveSound=BlackOpsMoveLoop
+ElitePrimary=20mmRapidAGE
+EliteSecondary=20mmRapidAAE
+
+[20mmRapidAG]
+Damage=30
+ROF=20
+Range=6
+MinimunRange=.9
+Projectile=InvisibleGround
+Speed=100
+Warhead=GyroWH
+Report=SlyAttack
+
+[20mmRapidAA]
+Damage=30
+ROF=20
+Range=6
+Projectile=Invisible4
+Speed=100
+Warhead=GyroWH
+Report=SlyAttack
+
+[20mmRapidAGE]
+Damage=40
+ROF=8
+Range=6
+MinimunRange=.9
+Projectile=InvisibleGround
+Speed=100
+Warhead=GyroWH
+Report=SlyAttack
+
+[20mmRapidAAE]
+Damage=40
+ROF=8
+Range=6
+Projectile=Invisible4
+Speed=100
+Warhead=GyroWH
+Report=SlyAttack

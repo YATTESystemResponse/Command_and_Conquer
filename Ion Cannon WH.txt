@@ -1,0 +1,57 @@
+;*****************
+;*** Ion
+;****************************
+
+[ParticleCannonBeamWarhead] 
+Verses=150%,100%,90%,70%,60%,45%,15%,10%,5%,100%,100% 
+CellSpread=3 
+PercentAtMax=.85 
+InfDeath=5 
+AnimList=CHRONOBM 
+Bright=yes 
+CombatLightSize=1000% 
+CLDisableRed=true 
+CLDisableGreen=false 
+CLDisableBlue=false 
+
+[ParticleCannonWarhead] 
+Verses=150%,100%,90%,70%,60%,45%,15%,10%,5%,100%,100% 
+CellSpread=3 
+PercentAtMax=.85 
+InfDeath=5 
+AnimList=EXPLOLRG 
+
+; Satellite Orbital Laser
+; Fused ParticleCannonWH
+[IonCannonWH]
+CellSpread=2
+PercentAtMax=.5
+;Verses=100%,100%,100%,100%,100%,100%,100%,100%,100%,100%,100%
+Verses=200%,200%,200%,100%,100%,100%,25%,25%,25%,100%,100%
+InfDeath			= 5
+Wood=yes
+Wall=yes
+Fire=yes
+Deform				= 100%
+Sparky				= no
+ShakeXlo			= 10
+ShakeXhi			= 10
+ShakeYlo			= 10
+ShakeYhi			= 20
+AnimList			= IONRING;IONBEAM;ParticleCannonImpactFX
+;PreImpactAnim			= IONBEAM;IONDUMY
+Conventional			= no
+Bright				= yes
+CombatLightSize			= 5;2.5
+CLDisableRed			= true
+CLDisableGreen			= true
+CLDisableBlue			= false
+Ripple.Radius			= 79
+Shake
+
+[IonCannonWH_]
+AnimList			= 
+CLDisableRed			= false
+CLDisableGreen			= false
+CLDisableBlue			= true
+

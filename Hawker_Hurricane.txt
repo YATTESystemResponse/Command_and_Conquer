@@ -1,0 +1,6 @@
+
+[AircraftTypes]
+= HawkerHurricane
+
+; Hawker Hurricane
+[HawkerHurricane]
