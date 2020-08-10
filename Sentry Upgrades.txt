@@ -1,0 +1,237 @@
+
+;------------------------------------------------------------------------------
+; Gyro Module for Sentry Turret		; Flechette cannon add-on for Sentry Tower
+[EGSNTY.Upgrade1]			;[EGFLEC]
+UIName=NOSTR:Gyro Module		;Name:GAFLCH
+Name=GyroGun Module				;Flechette Cannon
+
+;----- Art -----
+Image=ESNT1
+
+;----- Construction -----
+Owner=Alliance,YuriCountry,Empire
+Prerequisite=EGCNST,EGSNTY
+TechLevel=2
+BuildCat=Combat
+Cost=300				;200;150
+PowersUpBuilding=EGSNTY
+;PowersUpToLevel=1
+
+;----- Scoring -----
+Points=30
+
+;----- Power -----
+Power=-20
+Powered=yes
+
+;----- Weapons -----
+; Remember that for upgrades, Primary and Secondary must be the same and they must BOTH be set, neither must be omitted! 
+Primary=SentryGyroGun		; this should be primary for all of the upgrades
+Secondary=SentryGyroGun		; and this one varied by upgrade
+
+;----- House AI -----
+AIBasePlanningSide=4
+IsBaseDefense=yes
+ThreatPosed=0			; This value MUST be 0 for all building addons
+AntiInfantryValue=25
+AntiArmorValue=5 ;10
+AntiAirValue=0
+
+;------------------------------------------------------------------------------
+; Grenade launcher addon for component tower
+[EGSNTY.Upgrade2]		;[EGWEBG]
+UIName=NOSTR:Webgun Module	;Name:EGWEBG
+Name=Web Launcher
+
+;----- Art -----
+Image=ESNT2			; This is only needed to fetch the Cameo now, since the turrets all look the same. 
+
+;----- Construction -----
+Owner=Alliance,Empire,Kingdom,Shogunate
+Prerequisite=EGCNST,EGSNTY
+TechLevel=4;9
+BuildCat=Combat
+Cost=600
+PowersUpBuilding=EGSNTY
+;PowersUpToLevel=-1
+
+;----- Scoring -----
+Points=30
+
+;----- Power -----
+Power=-20
+Powered=yes
+
+;----- Weapons -----
+Primary=SentryWebLauncher
+Secondary=SentryWebLauncher
+
+;----- House AI -----
+AIBasePlanningSide=4
+IsBaseDefense=yes
+ThreatPosed=0			; This value MUST be 0 for all building addons
+AntiInfantryValue=10
+AntiArmorValue=25
+AntiAirValue=0
+
+;------------------------------------------------------------------------------
+; Grants repair to nearby units
+[EGSNTY.Upgrade4]
+UIName=NOSTR:Rejuvenator Module
+Name=Repair Module
+
+;----- Art -----
+Image=ESNT4
+
+;----- Construction -----
+Owner=Alliance,YuriCountry,Empire
+Prerequisite=EGCNST,EGSNTY
+TechLevel=5
+BuildCat=Combat
+Cost=300
+PowersUpBuilding=EGSNTY
+;PowersUpToLevel=-1
+
+;----- Scoring -----
+Points=30
+
+;----- Power -----
+Power=-30
+Powered=yes
+
+;----- Weapons -----
+Primary=SentryRepairKit
+DistributedFire=yes
+
+;----- House AI -----
+AIBasePlanningSide=4
+ThreatPosed=0			; This value MUST be 0 for all building addons
+IsBaseDefense=yes
+AntiInfantryValue=8
+AntiArmorValue=8
+AntiAirValue=8
+
+;------------------------------------------------------------------------------
+; Turns one Module Turret into a trap. 
+[EGSNTY.Upgrade5]
+UIName=NOSTR:Blast Module
+Name=Blast Module
+
+;----- Art -----
+Image=ESNT4
+
+;----- Construction -----
+Owner=British,Alliance,YuriCountry,Empire
+Prerequisite=EGCNST,EGSNTY
+TechLevel=4;9
+BuildCat=Combat
+Cost=600
+PowersUpBuilding=EGSNTY
+;PowersUpToLevel=-1
+
+;----- Scoring -----
+Points=30
+
+;----- Power -----
+Power=-20
+Powered=yes
+
+;----- Weapons -----
+Primary=SentryBomb
+Secondary=SentryBomb
+
+;----- House AI -----
+AIBasePlanningSide=4
+ThreatPosed=0			; This value MUST be 0 for all building addons
+IsBaseDefense=yes
+AntiInfantryValue=10
+AntiArmorValue=25
+AntiAirValue=0
+
+;------------------------------------------------------------------------------
+; Grants attack bonus to nearby units
+[EGSNTY.Upgrade6]
+UIName=Name:Targeting Upgrade
+Name=Targeting Processor Upgrade
+
+;----- Art -----
+Image=ESNT4
+
+;----- Construction -----
+Owner=British,Alliance,YuriCountry,Empire
+Prerequisite=EGCNST,EGSNTY
+TechLevel=4;9
+BuildCat=Combat
+Cost=600
+PowersUpBuilding=EGSNTY
+;PowersUpToLevel=-1
+
+;----- Scoring -----
+Points=30
+
+;----- Power -----
+Power=-20
+Powered=yes
+
+;----- Weapons -----
+Primary=SentryLaserMarker
+Secondary=SentryGun
+
+;----- House AI -----
+AIBasePlanningSide=4
+ThreatPosed=0			; This value MUST be 0 for all building addons
+IsBaseDefense=yes
+AntiInfantryValue=10
+AntiArmorValue=25
+AntiAirValue=0
+
+;------------------------------------------------------------------------------
+[EGSNTY.Upgrade7]
+UIName=Name:Silkworm Missile Module
+Name=Silkworm Missile Upgrade
+
+;----- Art -----
+Image=ESNT7
+
+;----- Construction -----
+Owner=British,Alliance,YuriCountry,Empire
+Prerequisite=EGCNST,EGSNTY
+TechLevel=4;9
+BuildCat=Combat
+Cost=600
+PowersUpBuilding=EGSNTY
+;PowersUpToLevel=-1
+
+;----- Scoring -----
+Points=30
+
+;----- Power -----
+Power=-20
+Powered=yes
+
+;----- Weapons -----
+Primary=SilkwormMissileLauncher
+FireAngle=64
+
+;----- House AI -----
+AIBasePlanningSide=4
+ThreatPosed=0			; This value MUST be 0 for all building addons
+IsBaseDefense=yes
+AntiInfantryValue=10
+AntiArmorValue=25
+AntiAirValue=0
+
+[EGSNTY.Upgrade8]
+Name=Psi Suppressor Upgrade
+
+[EGSNTY.Upgrade9]
+Name=EMP Upgrade
+
+[EGSNTY.Upgrade10]
+Name=Railgun Upgrade
+
+[EGSNTY.Upgrade11]
+Name=Bio-Blast Module
+
+[EGSNTY.Upgrade12]
+Name=Trap Module
