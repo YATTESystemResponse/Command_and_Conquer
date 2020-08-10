@@ -1,0 +1,10 @@
+
+	[CRML]
+	Name=Tomahawk Cruise Missile Launcher
+	UIName=Name:CRML
+	...
+	Primary=CruiseLauncher
+	Elite=CruiseMissileE
+	ElitePrimary=CruiseMissileE
+	Spawns=CMISL
+	;Spawns=THWK	;CMISL hero version

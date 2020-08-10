@@ -1,0 +1,15 @@
+
+; Unit 731
+[BioInfantry]
+UIName=Name:BioInfantry
+Name=Infector
+Armor=hazmat
+;ImmuneToPoison=yes	; point-effect still works
+Primary=BioCapsuleLauncher
+Secondary=
+ElitePrimary=
+EliteSecondary=
+Assaulter=yes
+Explodes=yes
+DeathWeapon=yes
+
