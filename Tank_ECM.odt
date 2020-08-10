@@ -1,0 +1,258 @@
+;------------------------------------------------------------------------------
+[VehicleTypes]
+= Tank_ECM
+
+	PipScale=Passengers
+	Passengers=2
+	OpenTopped=yes
+
+;------------------------------------------------------------------------------
+	Turret=no
+	Primary=EmperorHack
+	Armor=heavy
+	MaxDebris=6
+	VeteranAbilities=STRONGER,FIREPOWER,SIGHT,FASTER
+	EliteAbilities=SELF_HEAL,STRONGER,FIREPOWER,ROF
+
+TechLevel=3 
+Sight=8 
+PipScale=Passengers 
+Speed=8
+Cost=1450 
+Points=20 
+ROT=5 
+Crusher=yes 
+Passengers=3 
+IsSelectableCombatant=yes 
+Maxdebris=3 
+DebrisTypes=TIRE 
+DebrisMaximums=6 
+ThreatPosed=10	; This value MUST be 0 for all building addons 
+DamageParticleSystems=SparkSys,SmallGreySSys 
+SpecialThreatValue=1 
+;Bombable=no 
+Size=3 
+SizeLimit=2 
+Accelerates=false 
+
+IsTilter=yes
+TooBigToFitUnderBridge=true
+TechLevel=8
+Trainable=no
+Sight=10
+Speed=4
+SelfHealing=yes
+PipScale=Ammo
+PipWrap=1
+Ammo=1
+BuildTimeMultiplier=1.2
+InitialAmmo=0
+Reload=500
+MinDebris=2
+EmptyReload=500
+ReloadIncrement=250
+Cost=1750
+CanRetaliate=no
+Soylent=825
+Points=25
+MaxDebris=6
+ThreatPosed=40
+DamageSmokeOffset=100, 100, 275
+Weight=3.5
+Accelerates=false
+ZFudgeColumn=8
+ZFudgeTunnel=13
+Size=6
+OpportunityFire=yes
+ElitePrimary=EmperorHack
+EliteSecondary=TankPulseWeaponE 
+Deployer=yes 
+IsSimpleDeployer=true 
+DeployFire=yes
+
+DamageSound=VehicleDamagedHeavy
+Crewed=yes
+
+;------------------------------------------------------------------------------
+; ECM Tank
+; Emperor Tank
+; Originally in Mental Omega. 
+[MRJ];ECMT;EMPR
+;----- Name -----
+UIName				= Name:MRJ 			; Not EMP Tank! 
+Name				= Electronic Warfare Tank	; Not EMP Tank! ; Emperor Tank
+
+;----- GFX -----
+Image				= JAMR			;ECMT
+ZFudgeColumn=10
+ZFudgeTunnel=13
+
+;----- Damage & destruction -----
+DamageParticleSystems=SparkSys,SmallGreySSys
+Explosion=TWLT070,S_BANG48,S_BRNL58,S_CLSN58,S_TUMU60
+MaxDebris=10
+MinDebris=3
+DebrisTypes=MRJ,MRJTUR,COMCORE,GASTANK,PIECE
+DebrisMaximums=1,1,1,1,6
+DebrisMinimums=1,1,0,0,2
+
+;----- Weapons -----
+
+Primary=TankHackWeapon 
+Secondary=TankPulseWeapon 
+
+RadarJamRadius			= 10
+Primary=TankHackerKit		; single control
+Secondary=TankJammerKit		; single disabler effect
+
+ElitePrimary=TankHackerKitE	; multi control
+EliteSecondary=TankJammerKitE	; single disabler effect
+
+IsGattling=yes
+TurretCount=1
+WeaponCount=6
+WeaponStages=3
+
+Stage1=100;200
+Stage2=100;400
+Stage3=100;600
+
+EliteStage1=75
+EliteStage2=50;200
+EliteStage3=50;300
+
+RateUp=1
+RateDown=0
+
+; 1st stage
+; Attempts to hack
+Weapon1=TankHackerKitNew	; Reduces Speed and Firepower by 20%
+Weapon2=TankHackerKitNew	; Reduces Speed and Firepower by 20%
+EliteWeapon1=TankHackerKitNew	; Reduces Speed and Firepower by 30%
+EliteWeapon2=TankHackerKitNew	; Reduces Speed and Firepower by 30%
+
+; 2nd stage
+; Still attemtps to hack
+Weapon3=TankHackerKit2		; Reduces Speed and Firepower by 60%;40%
+Weapon4=TankHackerKit2		; Reduces Speed and Firepower by 60%;40%
+EliteWeapon3=TankHackerKit2	; Reduces Speed and Firepower by 80%;50%
+EliteWeapon4=TankHackerKit2	; Reduces Speed and Firepower by 80%;50%
+
+; 3rd stage
+; The real weapons
+Weapon5=TankHackerKit3		; Control is established (where applicable)
+Weapon6=TankHackerKit3		; Completely disabled (where applicable)
+EliteWeapon5=TankHackerKit3	; Control is established (where applicable)
+EliteWeapon6=TankHackerKit3	; Completely disabled (where applicable)
+
+NoMovingFire=yes		; technically, these are yes, but I introduced them (2015/03/15)
+MobileFire=no			; because firing the beam on the move just looks off...
+
+;----- Turrets -----
+Turret=yes
+;TurretSpins=yes
+;PipScale=MindControl
+RadarJamRadius=8
+
+;----- Base stats -----
+Strength			= 300			; 180
+Size				= 3			; 5
+Weight=2.5
+
+;----- AI -----
+Category			= LRFS
+ThreatPosed=10
+SpecialThreatValue=1
+
+;----- Armor -----
+Armor				= ECMVehicle		; this exists now - like medium, but deflects missiles (also counts as Polymer now, but with additions) ; medium ; heavy
+Immune=no
+TypeImmune=yes
+ImmuneToEMP=yes
+ImmuneToRadiation=yes
+ImmuneToPsionics=yes
+ImmuneToPsionicWeapons=yes
+TiberiumProof=yes
+Crushable=no
+OmniCrushResistant=no
+Bombable=yes
+Parasiteable=no
+Warpable=yes
+ProtectedDriver=yes		; tricky - vehicle itself is automated, but carries crew of Hackers. 
+
+;----- Detection -----
+Sight=8
+Sensors=yes
+
+;----- Camouflage -----
+;Cloakable=yes
+;CloakStop=yes
+
+;----- Production -----
+Owner				= Alliance,Chinese,Japanese,Koreans	; Russians,Ukrainians,BlackGuards,Confederation,Chinese
+;RequiredHouses			= Chinese
+;SecretHouses			= Chinese
+TechLevel=8;9
+Prerequisite			= EAFactory,EATechCenter	;NAWEAP,NATECH
+;PrerequisiteOverride		= JATECH
+BuiltAt				= EAFactory
+Cost=1450
+AllowedToStartInMultiplayer	= no
+CrateGoodie			= yes
+Points=20
+
+;----- Controls -----
+IsSelectableCombatant=yes
+
+;----- SFX -----
+VoiceSelect			= EmperorSelect			; GenSovVehicleSelect
+VoiceMove			= EmperorMoveCommand		; GenSovVehicleMove
+VoiceAttack			= EmperorAttackCommand		; GenSovVehicleAttackCommand
+VoiceFeedback=
+DieSound			= GenVehicleDie
+MoveSound			= PrismTankMoveStart		; FlakTrackMoveStart
+CrushSound=TankCrush
+
+VoiceSelect=JammerSelect
+VoiceMove=JammerMoveCommand
+VoiceAttack=JammerAttackCommand
+VoiceFeedback=
+DieSound=GenVehicleDie
+CrushSound=GenVehicleCrush
+AmbientSound=JammerAmbientLoop
+MoveSound=JammerMoveLoop
+;EnterTransportSound=EnterTransport
+;LeaveTransportSound=ExitTransport
+
+;----- Movement -----
+Speed=8
+Locomotor={4A582741-9839-11d1-B709-00A024DDAFD1}
+MovementZone=Crusher
+SpeedType=Track
+Tracked=yes
+Accelerates=true
+ROT=5
+IsTilter=yes
+Crusher=yes
+
+;----- Veterancy -----
+; gain EXP from drones you control
+Trainable=yes
+VeteranAbilities=SPEED,STRONGER,SIGHT				; FIREPOWER is meaningless. 
+EliteAbilities=SELF_HEAL,SPEED,STRONGER,SIGHT			; FIREPOWER and ROF are meaningless. Added SPEED. 
+
+;Deployer=yes
+;IsSimpleDeployer=true
+;DeployFire=yes
+
+;----- Crew -----
+Crewed=yes
+Survivor.Side4=HAX0R
+Survivor.PilotCount=1;3
+Survivor.RookiePilotChance=30
+Survivor.VeteranPilotChance=60
+Survivor.ElitePilotChance=100
+;Passengers=3
+;PipScale=Passengers
+;SizeLimit=1
+;OpenTopped=yes
