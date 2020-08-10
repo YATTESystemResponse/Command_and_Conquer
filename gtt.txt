@@ -1,0 +1,162 @@
+
+;------------------------------------------------------------------------------
+; rapid fire anti-ground machine gun
+[GattlingAG.stg1]
+Damage=25
+ROF=16
+Range=5
+Projectile		= InvisibleLow
+Speed=100
+Warhead=GattWH
+Report=GattlingGunAttackLoop1
+;DownReport=GattlingGunDecreaseLoop1
+Burst=2
+Anim=MGUN-N,MGUN-NE,MGUN-E,MGUN-SE,MGUN-S,MGUN-SW,MGUN-W,MGUN-NW
+
+
+;------------------------------------------------------------------------------
+; rapid fire anti-air machine gun
+[GattlingAA.stg1]
+Damage=25
+ROF=16
+Range=8
+Projectile=Invisible4 ;GEF Anti air ;SA
+Speed=100
+Warhead=GattWH
+Report=GattlingGunAttackLoop1
+;DownReport=GattlingGunDecreaseLoop1
+Burst = 2
+Anim=MGUN-N,MGUN-NE,MGUN-E,MGUN-SE,MGUN-S,MGUN-SW,MGUN-W,MGUN-NW
+
+;------------------------------------------------------------------------------
+; rapid fire anti-ground machine gun
+[GattlingAG.stg2]
+Damage=25
+ROF=16
+Range=5
+Projectile=InvisibleLow
+Speed=100
+Warhead=SA
+Report=GattlingGunAttackLoop2
+;DownReport=GattlingGunDecreaseLoop2
+Anim=GUNFIRE
+Burst=2
+
+;------------------------------------------------------------------------------
+; rapid fire anti-air machine gun
+[GattlingAA.stg2]
+Damage=30
+ROF=8
+Range=8
+Projectile=Invisible4
+Speed=100
+Warhead=GattWH
+Report=GattlingGunAttackLoop2
+;DownReport=GattlingGunDecreaseLoop2
+Anim=GUNFIRE
+Burst=2
+
+; rapid fire anti-ground machine gun
+[Gattling3_AG]
+Damage=25
+ROF=16
+Range=5
+Projectile=InvisibleLow
+Speed=100
+Warhead=SSA
+Report=GattlingGunAttackLoop3
+;DownReport=GattlingGunDecreaseLoop3
+Anim=VTMUZZLE
+Burst=2
+
+; rapid fire anti-air machine gun
+[Gattling3_AA]
+Damage=40
+ROF=4
+Range=8
+Projectile=Invisible4
+Speed=100
+Warhead=GattWH
+Report=GattlingGunAttackLoop3
+;DownReport=GattlingGunDecreaseLoop3
+Anim=VTMUZZLE
+Burst=2
+
+
+; rapid fire anti-ground machine gun
+[AGGattlingE]
+Damage=25
+ROF=12
+Range=5
+Projectile=Invisiblelow ;GEF Anti ground ;SA
+Speed=100
+Warhead=GattWH
+Report=GattlingGunAttackLoop1
+;DownReport=GattlingGunDecreaseLoop1
+Burst = 2
+Anim=MGUN-N,MGUN-NE,MGUN-E,MGUN-SE,MGUN-S,MGUN-SW,MGUN-W,MGUN-NW
+
+; rapid fire anti-air machine gun
+[AAGattlingE]
+Damage=25
+ROF=12
+Range=8
+Projectile=Invisible4 ;GEF Anti air ;SA
+Speed=100
+Warhead=GattWH
+Report=GattlingGunAttackLoop1
+;DownReport=GattlingGunDecreaseLoop1
+Burst = 2
+Anim=MGUN-N,MGUN-NE,MGUN-E,MGUN-SE,MGUN-S,MGUN-SW,MGUN-W,MGUN-NW
+
+; rapid fire anti-ground machine gun
+[AGGattling2E]
+Damage=25
+ROF=12
+Range=5
+Projectile=Invisiblelow ;GEF Anti ground ;SA
+Speed=100
+Warhead=SA
+Report=GattlingGunAttackLoop2
+;DownReport=GattlingGunDecreaseLoop2
+Anim=GUNFIRE
+Burst = 2
+
+; rapid fire anti-air machine gun
+[AAGattling2E]
+Damage=25
+ROF=6
+Range=8
+Projectile=Invisible4 ;GEF Anti air ;SA
+Speed=100
+Warhead=GattWH
+Report=GattlingGunAttackLoop2
+;DownReport=GattlingGunDecreaseLoop2
+Anim=GUNFIRE
+Burst = 2
+
+; rapid fire anti-ground machine gun
+[AGGattling3E]
+Damage=25
+ROF=12
+Range=5
+Projectile=Invisiblelow ;GEF Anti ground ;SA
+Speed=100
+Warhead=SSA
+Report=GattlingGunAttackLoop3
+;DownReport=GattlingGunDecreaseLoop3
+Anim=VTMUZZLE
+Burst = 2
+
+; rapid fire anti-air machine gun
+[AAGattling3E]
+Damage=25
+ROF=3
+Range=8
+Projectile=Invisible4 ;GEF Anti air ;SA
+Speed=100
+Warhead=GattWH
+Report=GattlingGunAttackLoop3
+;DownReport=GattlingGunDecreaseLoop3
+Anim=VTMUZZLE
+Burst = 2

@@ -1,0 +1,106 @@
+; Upgrade No. 1 for Comm Center: Defense Control Node
+[EACommCenterUpgrade1]
+UIName				= Name:EGCommCenterUpgrade1
+Name				= Defense Control Node
+Prerequisite=EGCommCenter,EGTechCenter
+Prerequisite.Negative=EGCommCenterUpgrade1
+TechLevel=10
+Owner=Alliance,Chinese,Japanese,Koreans
+AIBasePlanningSide=4
+AIBuildThis=yes
+BuildCat=Combat
+Cost=750
+Points=30
+Power=-20
+PowersUpBuilding=EGCommCenter
+PowersUpToLevel=-1
+ThreatPosed=0	; This value MUST be 0 for all building addons
+IsThreatRatingNode=yes
+
+; Upgrade No. 2 for Comm Center: Drone Control Node
+[EGCommCenterUpgrade2]
+UIName=Name:EGCommCenterUpgrade2
+Name=Drone Control Node
+Prerequisite=EGCommCenter,EGTechCenter
+Prerequisite.Negative=EGCommCenterUpgrade2
+TechLevel=10
+Owner=Alliance,Chinese,Japanese,Koreans
+AIBasePlanningSide=4
+AIBuildThis=yes
+BuildCat=Combat
+Points=30
+Power=-100
+Cost=600
+ThreatPosed=0	; This value MUST be 0 for all building addons
+Powered=true
+SuperWeapon=SpyDroneSpecial
+SuperWeapon2=HunterKillerSpecial
+
+; Upgrade No. 3 for Comm Center: Electronic Warfare Node
+[EGCommCenterUpgrade3]
+UIName=Name:
+Name=Electronic Warfare Node
+Prerequisite=EGCommCenter,EGTechCenter
+Prerequisite.Negative=EGCommCenterUpgrade3
+TechLevel=10
+Owner=Alliance,Chinese,Japanese,Koreans
+AIBasePlanningSide=4
+AIBuildThis=yes
+Cost=750
+Points=30
+Power=-20
+PowersUpBuilding=EGCommCenter
+PowersUpToLevel=-1
+ThreatPosed=0	; This value MUST be 0 for all building addons
+BuildCat=Combat
+Powered=true
+SuperWeapon=ElectricDominatorSpecial
+SuperWeapon2=MoneySpecial
+Academy.Types=H4X0R
+Academy.InfantryVeterancy=2
+
+; Upgrade No. 12 for Comm Center
+[YACOMM12]
+UIName=NOSTR:Powergrid Link
+Image=YACM12
+Name=Powergrid Node
+Prerequisite=CAIONC
+Prerequisite.Negative=YACOMM12
+TechLevel=10
+Armor=wood
+Sight=1
+Owner=YuriCountry,Alliance,Empire
+Cost=750
+Points=30
+Power=-20
+Crewed=no
+Capturable=no
+Explosion=TWLT070,S_BANG48,S_BRNL58,S_CLSN58,S_TUMU60
+PowersUpBuilding=caionc
+PowersUpToLevel=-1
+ThreatPosed=0	; This value MUST be 0 for all building addons
+BuildCat=Armor
+SuperWeapon=TogglePowerSpecial
+
+; Upgrade No. 13 for Comm Center
+[YACOMM13]
+UIName=NOSTR:CommLink
+Name=CommLink
+Image=YACM13
+Prerequisite=CAIONC
+Prerequisite.Negative=YACOMM13
+TechLevel=10
+Armor=wood
+Sight=1
+Owner=YuriCountry,Alliance,Empire
+Cost=750
+Points=30
+Power=-20
+Crewed=no
+Capturable=no
+Explosion=TWLT070,S_BANG48,S_BRNL58,S_CLSN58,S_TUMU60
+PowersUpBuilding=caionc
+PowersUpToLevel=-1
+ThreatPosed=0	; This value MUST be 0 for all building addons
+BuildCat=Armor
+SuperWeapon=PsychicDominatorSpecial
