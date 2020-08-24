@@ -8,7 +8,7 @@
 +				= Firewolf
 
 ;------------------------------------------------------------------------------
-; Flamewolf/Firewolf Assault Armor (NOD Wolverine) - cloned from TS Wolverine
+; Flamewolf/Firewolf Assault Armor (NOD Wolverine) - cloned from, and balances, TS Wolverine
 [Firewolf]
 UIName				= Name:Firewolf
 Name				= Flamethrower Wolverine
@@ -44,6 +44,7 @@ Pip				= red
 Explodes			= yes
 DeathWeapon			= 
 Explosion			= TWLT070
+DeathAnim				= TWLT070
 
 ;----- SFX -----
 VoiceSelect			= FirewolfSelect
@@ -56,6 +57,7 @@ MaxDebris=2
 Locomotor			= {55D141B8-DB94-11d1-AC98-006008055BB5}
 MovementZone			= Normal
 ThreatPosed=15	; This value MUST be 0 for all building addons
+
 DamageParticleSystems=SparkSys,SmallGreySSys
 EliteAbilities=VEIN_PROOF
 Accelerates=false
@@ -68,35 +70,6 @@ Cost=650
 Locomotor={4A582744-9839-11d1-B709-00A024DDAFD1}
 PhysicalSize=1
 EliteAbilities=STRONGER
-
-Turret=no
-IsTilter=no
-TooBigToFitUnderBridge=true
-TechLevel=1
-Sight=6
-Speed=7
-CrateGoodie=yes
-Owner=Germans,Irish,Spanish,Turkish
-Cost=500
-Points=25
-ROT=5
-;Explodes=yes
-;DeathWeapon=
-DeathAnim=TWLT070,S_BANG48,S_BRNL58,S_CLSN58,S_TUMU60
-Explosion=TWLT070,S_BANG48,S_BRNL58,S_CLSN58,S_TUMU60
-VoiceSelect=15-I000,15-I006,15-I040,15-I042
-VoiceMove=15-I024,15-I044
-VoiceAttack=15-I006,15-I046
-VoiceFeedback=
-MaxDebris=2
-Locomotor={55D141B8-DB94-11d1-AC98-006008055BB5}
-MovementZone=Normal
-ThreatPosed=15	; This value MUST be 0 for all building addons
-DamageParticleSystems=SparkSys,SmallGreySSys
-EliteAbilities=VEIN_PROOF
-Accelerates=false
-ImmuneToVeins=yes
-
 
 ; Firewolf weapon
 [FirewolfGuns]
