@@ -11,3 +11,35 @@ AreaFire=yes ; just shoot straight at ground under feet
 FireOnce=yes ; Only fire once; don't stay in attack mission
 Report=YuriDeploy
 Anim=PSIRING
+
+NeutronWave
+This may be used by the Chrono Prison.
+
+	[NeutronWave]
+	Damage=250
+	Range=1
+	ROF=50
+	Projectile=Temporal
+	Speed=
+
+ElectronWave
+
+ProtonWave
+
+AtomWave
+
+IonWave
+
+	[IonWave]
+	Damage=250
+	Range=1
+	ROF=50
+	Projectile=PulsPr
+	Speed=1
+	Warhead=IonPulse
+	AreaFire=yes
+	FireOnce=yes
+	Report=ION1
+	Anim=RING1
+
+IonPulseWeapon
